@@ -1,0 +1,9 @@
+/*
+    AQUI FICA OS ESTILOS PARA A PÁGINA TODA
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@300..900&display=swap');
+
+body, input, button {
+    font-family: "Darker Grotesque", serif;
+}
