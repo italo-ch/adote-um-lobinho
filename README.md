@@ -25,3 +25,4 @@ O projeto consiste no desenvolvimento colaborativo da página "Adote um Lobinho"
 
 - [Italo Chiaradia](https://github.com/italo-ch)
 - [Bruno Coitinho](https://github.com/brunocoitinho)
+- [Yasmin Macedo](https://github.com/yasminmcedo11)
