@@ -1,0 +1,18 @@
+.button {
+    background-color: var(--yellow);
+    border: 1px solid var(--yellow);
+    color: var(--dark-gray);
+    border: none;
+    font-size: 25px;
+    font-weight: 700;
+    cursor: pointer;
+    padding-inline: 10px;
+    padding-bottom: 7px;
+    text-decoration: none;
+    transition: all .2s;
+}
+.button:hover {
+    color: var(--yellow);
+    background-color: inherit;
+    border: 1px solid var(--yellow);
+}
