@@ -1,0 +1,42 @@
+.card-example {
+    width: 100%;
+    display: flex;
+    margin-top: 64px;
+    gap: 71px;
+}
+.reverse {
+    flex-direction: row-reverse;
+    text-align: end;
+}
+.reverse .image-container img {
+    width: 430px;
+    height: 328px;
+    box-shadow: 41px -33px 0 0 var(--dark-blue);
+}
+.image-container, .content-container {
+    flex: 1;
+}
+.image-container img {
+    width: 430px;
+    height: 328px;
+    box-shadow: -41px -33px 0 0 var(--dark-blue);
+}
+.content-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.content-container .title h3 {
+    font-size: 36px;
+    font-weight: bold;
+    line-height: 48px;
+}
+.content-container .title span {
+    font-size: 20px;
+    line-height: 27px;
+    font-weight: 100;
+}
+.content-container p {
+    font-size: 24px;
+    line-height: 20px;
+}
