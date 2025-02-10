@@ -86,6 +86,8 @@ class Lobinhos {
     }
 }
 
+const lobinhos = new Lobinhos(JSON.parse(localStorage.getItem("lobos")));
+
 // Funções para renderizar lobos em cards
 
 function renderizarLobo(nome, idade, descricao, imagem, statusAdocao) {
@@ -128,3 +130,61 @@ function renderizarLobo(nome, idade, descricao, imagem, statusAdocao) {
     // Adicionando o card ao container
     container.appendChild(cardExample);
 }
+
+// Funções para lidar com eventos
+
+function adicionaNovoLobo(event) {
+    event.preventDefault();
+
+    const nameInput = document.querySelector('#name');
+    const ageInput = document.querySelector('#age');
+    const linkInput = document.querySelector('#link');
+    const descriptionInput = document.querySelector("#description");
+
+    const name = nameInput.value.trim();
+    const age = parseInt(ageInput.value.trim(), 10);
+    const link = linkInput.value.trim();
+    const description = descriptionInput.value.trim();
+
+    // Validações
+    if (!name) {
+        alert("O nome não pode estar vazio.");
+        return;
+    }
+
+    if (isNaN(age) || age <= 0) {
+        alert("A idade deve ser um número válido e maior que zero.");
+        return;
+    }
+
+    if (!link) {
+        alert("O link da foto não deve estar vazio.");
+        return;
+    }
+
+    if (!description) {
+        alert("A descrição não pode estar vazia.");
+        return;
+    }
+
+    // Criando o objeto Lobinho caso os dados sejam válidos
+    const lobinho = new Lobinho(name, age, description, link);
+    console.log(lobinho);
+
+    lobinhos.adicionarLobinho(lobinho);
+    
+    // Exibe mensagem de sucesso
+    alert(`Lobinho "${name}" adicionado com sucesso! 🐺`);
+    console.log(lobinhos);
+
+    // Limpa os campos do formulário
+    nameInput.value = "";
+    ageInput.value = "";
+    linkInput.value = "";
+    descriptionInput.value = "";
+}
+
+
+const saveBtn = document.querySelector('.save-btn');
+
+saveBtn.addEventListener('click', adicionaNovoLobo);
