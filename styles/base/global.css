@@ -15,6 +15,6 @@ main {
     flex: 1;
 }
   
-body, input, button {
+body, input, button, textarea {
     font-family: "Darker Grotesque", serif;
 }
