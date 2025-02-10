@@ -1,0 +1,23 @@
+.principal_qm {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 20px;
+    padding-left: 220px;
+    padding-right: 220px;
+}
+
+.principal_qm h1 {
+    font-size: 56px;
+    color: black;
+    font-weight: 600;
+}
+
+.principal_qm p {
+    font-size: 24px;
+    font-weight: 400;
+    color: black;
+    font-family: Darker Grotesque;
+}
