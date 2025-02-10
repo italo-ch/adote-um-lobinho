@@ -22,8 +22,39 @@
             </a>
         </nav>
     </header>
-    <main>
-        <h1>ADICIONAR LOBINHO</h1>
+    <main class="adicionar-lobinho-main">
+        <form class="form">
+            <h1>
+                Coloque um Lobinho para Adoção
+            </h1>
+            <div>
+                <div class="two-cols">
+                    <div class="input-group name-input-group">
+                        <label for="name">Nome do Lobinho: </label>
+                        <input id="name" type="text" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="age">Anos: </label>
+                        <input id="age" value="1" type="number" min="1" max="99" required>
+                    </div>
+                </div>
+                <div>
+                    <div class="input-group">
+                        <label for="link">Link da Foto</label>
+                        <input id="link" type="text" required>
+                    </div>
+                </div> 
+                <div>
+                    <div class="input-group">
+                        <label for="description">Descrição: </label>
+                        <textarea id="description" required></textarea>
+                    </div>
+                </div>
+                <button type="submit" class="save-btn">
+                    Salvar
+                </button>
+            </div>
+        </form>
     </main>
     <footer class="footer">
         <div class="footer-container">
