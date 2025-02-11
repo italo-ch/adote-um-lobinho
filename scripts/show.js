@@ -16,6 +16,8 @@ try{
 
 }catch(error){
     console.error('Erro ao acessar dado no localStorage:', error);
+    alert('Erro 4Au4: Lobo não encontrado')
+    window.location.replace("lista-de-lobinhos.html");
 }
 
 function carregarLobo(lobo){
