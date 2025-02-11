@@ -1,0 +1,84 @@
+
+
+
+
+.bottom-nav{
+    margin: 0 auto;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 16px;
+    margin-bottom: 16px;
+}
+
+.bottom-nav__list{
+    display: flex;
+    width: 10vw;
+}
+
+.bottom-nav__item{
+    width: 100%;
+}
+
+.bottom-nav__link{
+    display: block;
+    text-decoration: none;
+    font-family: "Darker Grotesque", serif;
+    font-weight: bold;
+    font-size: 18px;
+    color: black;
+}
+
+.search-filter{
+    display: flex;
+    flex-direction: column;
+    max-width:1000px;
+    margin: 0 auto;
+    margin-top: 8px;
+}
+
+
+.search{
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.search .button{
+    margin-top: 16px;
+    padding: 8px 16px 16px 16px;
+}
+
+.search__container{
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+    max-width: 880px;
+    height: 32px;
+}
+
+#searchName{
+    min-width: 880px;
+    height: 44px;
+    margin-top: 0;
+}
+
+.filter{
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 20px;
+}
+
+
+.lista-lobos .button, .search .button{
+    color: white;
+}
+
+.lista-lobos .reverse .title{
+    flex-direction: row;
+    justify-content: space-between;
+}
+
