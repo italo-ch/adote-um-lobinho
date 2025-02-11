@@ -1,12 +1,14 @@
 const navList = document.querySelector('.bottom-nav__list')
 const searchBar = document.querySelector('#searchName')
+const checkAdotados = document.querySelector('#adotados')
 
 
 document.addEventListener('DOMContentLoaded', (e) =>{
     
     
     let paginaAtual = 1;
-
+    let searchAdotados = false;
+    
     
     
     
@@ -15,17 +17,53 @@ document.addEventListener('DOMContentLoaded', (e) =>{
 
     });
 
-    searchBar.addEventListener("keyup", (e) => {
+    checkAdotados.addEventListener( 'change', function() {
+        if(this.checked) {
+            searchAdotados = true
+        } else {
+            searchAdotados = false
+        }
+
         carregarDados().then((lobos) => {
-            let filtrado = lobos.filter((elem) =>
-                elem.nome.toLowerCase().includes(searchBar.value.toLowerCase())
+            console.log(searchAdotados)
+            let filtrado = lobos.filter((elem) =>{
+                if (!searchAdotados){
+                    return elem.nome.toLowerCase().includes(searchBar.value.toLowerCase())
+                }else{
+                    return elem.nome.toLowerCase().includes(searchBar.value.toLowerCase()) && elem.adotado == true
+                }
+                
+            }
+                
             );
     
             paginaAtual = 1;
             construirPagina(paginaAtual, filtrado);
-            // construirNavButtons(paginaAtual, filtrado);
+            
         });
     });
+
+    searchBar.addEventListener("keyup", (e) => {
+        carregarDados().then((lobos) => {
+            console.log(searchAdotados)
+            let filtrado = lobos.filter((elem) =>{
+                if (!searchAdotados){
+                    return elem.nome.toLowerCase().includes(searchBar.value.toLowerCase())
+                }else{
+                    return elem.nome.toLowerCase().includes(searchBar.value.toLowerCase()) && elem.adotado == true
+                }
+                
+            }
+                
+            );
+    
+            paginaAtual = 1;
+            construirPagina(paginaAtual, filtrado);
+            
+        });
+    });
+
+
 
 })
 
@@ -67,7 +105,7 @@ function construirPagina(idPagina, dados){
                                     ${dados[i].idade}
                                 </span>
                             </div>
-                            <a href="adotar-lobinho.html" class="button" id='btnLobo${dados[i].id}'>
+                            <a href="adotar-lobinho.html" class="button btn-lobo" id='btnLobo-${dados[i].id}'>
                                 Adotar
                             </a>
                         </div>
@@ -77,6 +115,19 @@ function construirPagina(idPagina, dados){
                         </p>
                     </div>
                 </div>`
+    }
+
+    let botoes = document.querySelectorAll('.btn-lobo')
+    console.log(botoes)
+    for (let i = 0; i < botoes.length; i++) {
+        let idLobo = botoes[i].id.split('-')[1]
+
+        let index = dados.findIndex(x => x.id == idLobo);
+        if (dados[index].adotado == true){
+            botoes[i].innerText = 'Adotado'
+            botoes[i].classList.add('adotado')
+            botoes[i].href = ''
+        }
     }
 
     construirNavButtons(idPagina, dados)
@@ -171,11 +222,6 @@ function construirNavButtons(idPagina, dados){
             })
             
         }
-    
-    
-
-
-
     
     }
 }

@@ -85,6 +85,7 @@
     
 }
 
+
 .lista-lobos .button:hover, .search .button:hover{
     color: var(--yellow);
     border: 1px solid var(--yellow);
@@ -93,4 +94,12 @@
 .lista-lobos .reverse .title{
     flex-direction: row;
     justify-content: space-between;
+}
+
+.adotado{
+    background-color: var(--green);
+}
+
+.adotado:hover{
+    background-color: white;
 }
