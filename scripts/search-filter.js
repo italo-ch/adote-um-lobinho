@@ -105,7 +105,7 @@ function construirPagina(idPagina, dados){
                                     ${dados[i].idade}
                                 </span>
                             </div>
-                            <a href="adotar-lobinho.html" class="button btn-lobo" id='btnLobo-${dados[i].id}'>
+                            <a href="show-lobinho.html" class="button btn-lobo" id='btnLobo-${dados[i].id}'>
                                 Adotar
                             </a>
                         </div>
