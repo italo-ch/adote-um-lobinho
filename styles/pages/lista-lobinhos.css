@@ -62,13 +62,14 @@
 }
 
 #searchName{
-    min-width: 880px;
+    min-width: 835px;
     height: 44px;
     margin-top: 0;
     background-color: white;
     background-image: url(../../assets/icons/search.png);
     background-repeat: no-repeat;
     background-position: center left 10px;
+    padding-left: 45px;
 }
 
 .filter{
