@@ -127,7 +127,18 @@ function construirPagina(idPagina, dados){
             botoes[i].innerText = 'Adotado'
             botoes[i].classList.add('adotado')
             botoes[i].href = ''
+        }else{
+            botoes[i].addEventListener('click', (e)=>{
+                let loboSelecionado = JSON.stringify(dados[index])
+                localStorage.setItem('loboSelecionado', loboSelecionado)
+            })
         }
+
+                // let loboSelecionado = JSON.stringify(lobos[0])
+        // localStorage.setItem('loboSelecionado', loboSelecionado)
+        // console.log(localStorage.getItem('loboSelecionado'))
+        // loboRetornado = JSON.parse(localStorage.getItem('loboSelecionado'))
+        // console.log(loboRetornado)
     }
 
     construirNavButtons(idPagina, dados)
@@ -226,8 +237,3 @@ function construirNavButtons(idPagina, dados){
     }
 }
 
-        // let loboSelecionado = JSON.stringify(lobos[0])
-        // localStorage.setItem('loboSelecionado', loboSelecionado)
-        // console.log(localStorage.getItem('loboSelecionado'))
-        // loboRetornado = JSON.parse(localStorage.getItem('loboSelecionado'))
-        // console.log(loboRetornado)
