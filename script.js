@@ -184,7 +184,60 @@ function adicionaNovoLobo(event) {
     descriptionInput.value = "";
 }
 
+function adotarNovoLobo () {
+    let _nomeDono = document.querySelector('#nome-dono');
+    let _idadeDono = document.querySelector('#idade-dono');
+    let _emailDono = document.querySelector('#email-dono');
+
+    let nomeDono = _nomeDono.value.trim();
+    let idadeDono = parseInt(_idadeDono.value.trim(), 10);
+    let emailDono = _emailDono.value.trim();
+
+    let index = lobinhos.findIndex(x => x.id == loboSelecionado.id);
+
+    lobinhos[index].nomeDono = nomeDono
+    lobinhos[index].idadeDono = idadeDono
+    lobinhos[index].emailDono = emailDono
+    lobinhos[index].adotado = True
+
+    localStorage.setItem("lobos", JSON.stringify)
+}
+
+function mostarLobo (loboSelecionado) {
+    let loboSelect = JSON.parse(loboSelecionado)
+
+    let loboId = loboSelect.id
+    let loboNome = loboSelect.nome
+    let loboFoto = loboSelect.imagem
+    
+    let divFoto = document.querySelector(".foto")
+
+    const foto = document.createElement("img")
+    img.src = loboFoto
+    img.alt = fotoLobo
+    divFoto.appendChild(img);
+
+    let nomeH2 = document.querySelector(".adotar-lobinho-nome")
+    let idP = document.querySelector(".adotar-lobinho-id")
+
+    nomeH2.innerText = `Adote o(a) ${loboNome}`
+    idP.innerText = `ID: ${loboId}`
+}
+
 
 const saveBtn = document.querySelector('.save-btn');
 
 saveBtn.addEventListener('click', adicionaNovoLobo);
+
+
+let loboSelecionado = JSON.parse(localStorage.getItem("loboSelecionado"))
+document.addEventListener('DOMContentLoaded', (e) =>{
+    mostrarLobo(loboSelecionado)
+})
+
+const adotarBtn = document.querySelector('.adotar-btn')
+
+adotarBtn.addEventListener('click', ()=>{adotarNovoLobo(loboSelecionado)})
+
+
+

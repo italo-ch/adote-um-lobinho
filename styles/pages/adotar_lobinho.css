@@ -25,13 +25,13 @@
 
 .adotar-lobinho-nome {
     font-size: 60px;
-    font-family: Darker Grotesque; /*adicionar mais aqui depois */
+    font-family: "Darker Grotesque"; /*adicionar mais aqui depois */
     color: black;
 }
 
 .adotar-lobinho-id {
     font-size: 14px;
-    font-family: Darker Grotesque; /*adicionar mais aqui depois */
+    font-family: "Darker Grotesque"; /*adicionar mais aqui depois */
     color: black;
 }
 
@@ -61,7 +61,7 @@
 
 .titulo {
     font-size: 30px;
-    font-family: Darker Grotesque;
+    font-family: "Darker Grotesque";
     color: black;
 }
 
@@ -71,7 +71,7 @@
     border-left: none;
     border-right: none;
     font-size: 20px;
-    font-family: Darker Grotesque;
+    font-family: "Darker Grotesque";
     color: black; 
     padding-left: 8px;
     padding-top: 2px;
@@ -122,7 +122,16 @@
     cursor: pointer;
     transition: all .2s;
 }
+
+.adotar-btn a {
+    text-decoration: none;
+    color: white;
+}
+
 .adotar-btn:hover {
     background-color: var(--white);
+}
+
+.adotar-btn:hover a {
     color: var(--dark-blue);
 }
