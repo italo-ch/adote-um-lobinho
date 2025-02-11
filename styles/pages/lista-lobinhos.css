@@ -18,6 +18,7 @@
 
 .bottom-nav__item{
     width: 100%;
+    margin-left: 8px;
 }
 
 .bottom-nav__link{
