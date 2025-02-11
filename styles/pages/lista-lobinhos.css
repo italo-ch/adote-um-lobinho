@@ -64,6 +64,10 @@
     min-width: 880px;
     height: 44px;
     margin-top: 0;
+    background-color: white;
+    background-image: url(../../assets/icons/search.png);
+    background-repeat: no-repeat;
+    background-position: center left 10px;
 }
 
 .filter{
@@ -75,10 +79,16 @@
 
 .lista-lobos .button, .search .button{
     color: white;
+    border: 1px solid transparent;
+    
+}
+
+.lista-lobos .button:hover, .search .button:hover{
+    color: var(--yellow);
+    border: 1px solid var(--yellow);
 }
 
 .lista-lobos .reverse .title{
     flex-direction: row;
     justify-content: space-between;
 }
-
