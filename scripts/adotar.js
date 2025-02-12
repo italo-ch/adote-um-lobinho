@@ -7,6 +7,7 @@ adotarBtn.addEventListener('click', ()=>{
     console.log(index)
     lobinhos[index] = adotarNovoLobo(lobinhos[index])
     localStorage.setItem("lobos", JSON.stringify(lobinhos))
+    window.location.replace("lista-de-lobinhos.html");
 })
 
 
