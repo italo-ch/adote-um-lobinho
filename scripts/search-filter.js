@@ -69,13 +69,16 @@ document.addEventListener('DOMContentLoaded', (e) =>{
 
 async function carregarDados() {
     try {
-        const response = await fetch("../lobinhos.json");
-        const data = await response.json();
-        return data;
+        const lobos = localStorage.getItem("lobos");
+        if (!lobos) {
+            throw new Error("Nenhum dado encontrado no localStorage");
+        }
+        return JSON.parse(lobos); 
     } catch (error) {
         console.error("Erro ao carregar JSON:", error);
     }
 }
+
 
 function construirPagina(idPagina, dados){
     const containerLobos = document.querySelector("#lobos-container");

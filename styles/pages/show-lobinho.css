@@ -1,0 +1,46 @@
+.visualiza-lobo .title-show{
+    font-size: 36px;
+    font-weight: bold;
+    line-height: 48px;
+    text-align: center;
+    margin-top: 50px;
+}
+
+.visualiza-lobo .button{
+    color: white;
+}
+
+
+.button--adocao{
+    background-color: var(--green);
+}
+
+.button--exclusao{
+    background-color: var(--red);
+}
+
+.button-container{
+    margin-top: 30px;
+    margin-bottom: 30px;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+.button-container .button{
+    margin-left: 48px;
+    border: 1px solid transparent;
+    
+}
+
+.button-container .button:hover{
+    color: black;
+}
+
+.button--adocao:hover{
+    border-color: var(--green);
+}
+
+.button--exclusao:hover{
+    border-color: var(--red);
+}
